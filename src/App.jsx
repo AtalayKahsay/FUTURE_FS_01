@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import {Hero, About, Projects, Experience, Testimonials, Contact} from '@/components';
+import {Hero, About, Projects, Experience, Testimonials, Contact} from '@/sections';
 import { Navbar } from '@/layouts';
 
 function App() {
