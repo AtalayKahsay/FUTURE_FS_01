@@ -2,7 +2,7 @@ import {} from 'react'
 
 function Hero() {
   return (
-    <div>Hero</div>
+    <section></section>
   )
 }
 
