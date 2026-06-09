@@ -26,7 +26,7 @@ const highlights = [
 
 function About() {
   return (
-    <section id="about" className="py-22 relative overflow-hidden">
+    <section id="about" className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
@@ -45,19 +45,19 @@ function About() {
 
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
              <p>
-                I'm a Full Stack Web Developer specializing in the MERN stack, focused on building practical web applications that balance functionality, performance, and clean user experience.
+               I specialize in full-stack web development with a focus on building products that are both technically sound and genuinely useful. My approach combines clean architecture on the backend with thoughtful, performant UI on the frontend.
               </p>
               <p>
-                I work with React, Node.js, Express, and MongoDB, along with MySQL for relational data. My focus is on building well-structured frontend interfaces and scalable backend systems with clean API design.
+                Beyond writing code, I pay attention to what makes applications reliable long-term — clean API design, efficient database queries, and code that the next developer can actually understand and build on.
               </p>
               <p>
-                I build full-stack projects, integrate third-party APIs, and deploy applications using modern tools like Vercel. Most of my learning comes from building real projects and improving them over time.
+                I learn by building. Every project I take on pushes me to solve real problems, make better decisions, and ship work I'm proud of. I'm currently open to roles where I can contribute meaningfully and grow fast.
               </p> 
             </div>
 
             <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
               <p className="text-lg font-medium italic text-foreground">
-                "I focus on building reliable and maintainable web applications that solve real problems, with an emphasis on clean architecture, performance, and user experience across the full stack."
+                "I don't just build features — I build systems that are easy to maintain, fast to use, and built to last."
               </p>
             </div>
           </div>

@@ -145,9 +145,7 @@ function Hero() {
             </div>
           </div>
         </div>
-      </div>
-
-      <div
+        <div
         className="absolute bottom-8 left-1/2 -translate-x-1/2 
       animate-fade-in animation-delay-800"
       >
@@ -161,6 +159,8 @@ function Hero() {
           <ChevronDown className="w-6 h-6 animate-bounce" />
         </a>
       </div>
+      </div>
+      
     </section>
   )
 }
