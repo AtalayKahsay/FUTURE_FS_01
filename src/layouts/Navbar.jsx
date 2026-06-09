@@ -67,7 +67,8 @@ function Navbar() {
             {navLinks.map((link, index) => (
               <a
                 href={link.href}
-                key={index} 
+                key={index}
+                onClick={() => setIsMobileMenuOpen(false)} 
                 className="text-lg text-muted-foreground hover:text-foreground py-2"
               >
                 {link.label}
@@ -75,7 +76,7 @@ function Navbar() {
               ))}
 
               <Button size="sm">
-                <a href="#contact">Contact Me</a>
+                <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>Contact Me</a>
               </Button>
           </div>
         </div>
