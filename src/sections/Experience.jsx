@@ -3,8 +3,9 @@ const experiences = [
     period: "May 2026 - Present",
     role: "Full Stack Web Developer",
     company: "Future Interns",
-    description: "Building and delivering full stack web projects as part of a structured internship program, covering front-end interfaces, REST APIs, and database integration.",
-    technologies: ["React", "Tailwind CSS", "JavaScript", "CSS"],
+    description: "Building and delivering front-end and full-stack web projects as part of a structured internship program, covering responsive UI development, REST APIs, and database integration.",
+    technologies: ["React", "Tailwind CSS", "JavaScript", "Node.js",
+    "Express.js", "MongoDB"],
     current: true,
   },
   {
