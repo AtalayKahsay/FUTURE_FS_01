@@ -1,4 +1,4 @@
-import { ArrowRight, ChevronDown } from "lucide-react"
+import { ArrowRight, ChevronDown, Download } from "lucide-react"
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import Button from "@/components/Button"
 import AnimatedBorderButton from "@/components/AnimatedBorderButton"
@@ -75,10 +75,15 @@ function Hero() {
             </div>
 
             <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-              <Button size="lg">
-                Contact Me <ArrowRight className="w-5 h-5" />
-              </Button>
-              <AnimatedBorderButton />
+              <a href="#contact">
+                <Button size="lg">
+                  Contact Me <ArrowRight className="w-5 h-5" />
+                </Button>
+              </a>
+              <AnimatedBorderButton>
+                <Download className="w-5 h-5" />
+                Download CV
+              </AnimatedBorderButton>
             </div>
 
             <div 
