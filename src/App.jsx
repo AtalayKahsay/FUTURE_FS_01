@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import {Hero, About, Projects, Experience, Testimonials, Contact} from '@/sections';
+import {Hero, About, Projects, Experience, Contact} from '@/sections';
 import { Navbar } from '@/layouts';
 
 function App() {
@@ -13,7 +13,6 @@ function App() {
         <About />
         <Projects />
         <Experience />
-        <Testimonials />
         <Contact />
       </main>
     </div>

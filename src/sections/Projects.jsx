@@ -7,25 +7,25 @@ const projects = [
     title: "Apple Clone",
     description: "A responsive clone of Apple's website with product showcases and a dynamic video section powered by the YouTube Data API.",
     image: "/projects/apple-clone.png",
-    tags: ["React", "CSS", "JavaScript", "YouTube API", "Responsive Design"],
+    tags: ["React", "CSS", "JavaScript", "YouTube API"],
     link: "#",
-    github: "https://github.com/AtalayKahsay/apple_project"
+    github: "https://github.com/AtalayKahsay/apple_project",
   },
   {
   title: "Golden Fork Restaurant",
   description: "A fine dining restaurant website with a dynamic photo gallery, email newsletter subscription, and an immersive dark UI with gold accents.",
   image: "/projects/golden-fork.png",
-  tags: ["React", "CSS", "JavaScript", "Vite"],
+  tags: ["React", "CSS", "JavaScript"],
   link: "#",
-  github: "https://github.com/AtalayKahsay/FUTURE_FS_03"
+  github: "https://github.com/AtalayKahsay/FUTURE_FS_03",
 },
   {
     title: "Personal Portfolio",
     description: "A modern developer portfolio with smooth animations, a glass-effect UI, and a clean layout to showcase skills and projects.",
     image: "/projects/atalay-portfolio.png",
-    tags: ["React", "Tailwind CSS", "JavaScript", "Responsive Design"],
+    tags: ["React", "Tailwind CSS", "JavaScript"],
     link: "#",
-    github: "https://github.com/AtalayKahsay/FUTURE_FS_01"
+    github: "https://github.com/AtalayKahsay/FUTURE_FS_01",
   }
 ];
 
@@ -110,6 +110,7 @@ function Projects() {
                 <p className="text-muted-foreground text-sm">
                   {project.description}
                 </p>
+                
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag, tagIdx) => (
                     <span 
