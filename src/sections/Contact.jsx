@@ -95,7 +95,7 @@ function Contact() {
             </span>
           </h2>
           <p className="text-muted-foreground animate-fade-in animation-delay-200">
-            Whether you have a project in mind or an opportunity to discuss, I'd love to hear from you. Send me a message and let's talk.
+            Whether you're looking for a developer, have a project idea, or want to discuss an opportunity, I'd be happy to connect.
           </p>
         </div>
 
@@ -118,7 +118,7 @@ function Contact() {
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
                   }
-                  className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" 
+                  className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary/40 outline-none transition-all" 
                 />
               </div>
               
@@ -138,7 +138,7 @@ function Contact() {
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
                   }
-                  className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"  
+                  className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary/40 outline-none transition-all"  
                 />
               </div>
 
@@ -157,7 +157,7 @@ function Contact() {
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })
                   }
-                  className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none" 
+                  className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary/40 focus:ring-1 focus:ring-primary outline-none transition-all resize-none" 
                 />
               </div>
 
@@ -186,16 +186,54 @@ function Contact() {
                      }`}
                 >
                   {submitStatus.type === "success" ? (
-                    <CheckCircle className="w-5 h-5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 shrink-0" />
                   ) : (
-                    <AlertCircle className="w-5 h-5 flex-shrink-0" />
+                    <AlertCircle className="w-5 h-5 shrink-0" />
                   )}
                   <p className="text-sm">{submitStatus.message}</p>
                 </div>
               )}
             </form>
           </div>
-
+          
+          <div className="space-y-6 animate-fade-in animation-delay-400 ">
+            <div className="glass rounded-3xl p-8 border border-primary/30">
+              <h3 className="text-xl font-semibold mb-6">
+                Contact Information
+              </h3>
+              <div className="space-y-4">
+                {contactInfo.map((item, i) => (
+                  <a
+                    key={i}
+                    href={item.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center gap-4 p-4 rounded-xl hover:bg-surface transition-colors cursor-pointer group"
+                  >
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                      <item.icon className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <div className="text-sm text-muted-foreground">
+                        {item.label}
+                      </div>
+                      <div className="font-medium">{item.value}</div>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          
+            <div className="glass rounded-3xl p-8 border border-primary/30">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+                <span className="font-medium">Open To Opportunities</span>
+              </div>
+              <p className="text-muted-foreground text-sm">
+                I'm currently open to full-time opportunities, internships, and freelance projects. Let's build something together.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
