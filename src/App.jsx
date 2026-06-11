@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import {Hero, About, Projects, Experience, Contact} from '@/sections';
-import { Navbar } from '@/layouts';
+import { Navbar, Footer } from '@/layouts';
 
 function App() {
 
@@ -15,6 +15,7 @@ function App() {
         <Experience />
         <Contact />
       </main>
+      <Footer />
     </div>
   )
 }
