@@ -83,6 +83,15 @@
     }
   }
 
+  @layer utilities {
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}
+
   @keyframes slow-drift {
     0%,
     100% {
@@ -127,7 +136,7 @@
   }
 
   .animate-marquee {
-    animation: marquee 40s linear infinite;
+    animation: marquee 30s linear infinite;
   }
 
   .animate-marquee:hover {

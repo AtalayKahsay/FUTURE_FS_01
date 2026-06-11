@@ -4,14 +4,6 @@ import AnimatedBorderButton from "@/components/AnimatedBorderButton";
 
 const projects = [
   {
-    title: "Apple Clone",
-    description: "A responsive clone of Apple's website with product showcases and a dynamic video section powered by the YouTube Data API.",
-    image: "/projects/apple-clone.png",
-    tags: ["React", "CSS", "JavaScript", "YouTube API"],
-    link: "#",
-    github: "https://github.com/AtalayKahsay/apple_project",
-  },
-  {
   title: "Golden Fork Restaurant",
   description: "A fine dining restaurant website with a dynamic photo gallery, email newsletter subscription, and an immersive dark UI with gold accents.",
   image: "/projects/golden-fork.png",
@@ -26,6 +18,14 @@ const projects = [
     tags: ["React", "Tailwind CSS", "JavaScript"],
     link: "#",
     github: "https://github.com/AtalayKahsay/FUTURE_FS_01",
+  },
+  {
+    title: "Apple Clone",
+    description: "A responsive clone of Apple's website with product showcases and a dynamic video section powered by the YouTube Data API.",
+    image: "/projects/apple-clone.png",
+    tags: ["React", "CSS", "JavaScript", "YouTube API"],
+    link: "#",
+    github: "https://github.com/AtalayKahsay/apple_project",
   }
 ];
 
@@ -75,7 +75,7 @@ function Projects() {
                   {project.link !== "#" && (
                     <a 
                       href={project.link} 
-                      className="p-2 rounded-full glass hover:bg-primary/40 hover:text-primary-foreground transition-all"
+                      className="p-2 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -85,7 +85,7 @@ function Projects() {
                   {project.github && (
                     <a 
                       href={project.github} 
-                      className="p-2 rounded-full glass hover:bg-primary/40 hover:text-primary-foreground transition-all"
+                      className="p-2 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
                       target="_blank"
                       rel="noreferrer"
                     >

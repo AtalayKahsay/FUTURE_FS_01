@@ -2,6 +2,7 @@ import { ArrowRight, ChevronDown, Download } from "lucide-react"
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import Button from "@/components/Button"
 import AnimatedBorderButton from "@/components/AnimatedBorderButton"
+import { useRef } from "react"
 
 const skills = [
   "HTML",
@@ -22,6 +23,29 @@ const skills = [
 ];
 
 function Hero() {
+  const marqueeRef = useRef(null);
+  const isDragging = useRef(false);
+  const startX = useRef(0);
+  const scrollLeft = useRef(0);
+
+  const handleMouseDown = (e) => {
+    isDragging.current = true;
+    startX.current = e.pageX - marqueeRef.current.offsetLeft;
+    scrollLeft.current = marqueeRef.current.scrollLeft;
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging.current) return;
+    e.preventDefault();
+    const x = e.pageX - marqueeRef.current.offsetLeft;
+    const walk = (x - startX.current) * 2;
+    marqueeRef.current.scrollLeft = scrollLeft.current - walk;
+  };
+
+  const handleMouseUp = () => {
+    isDragging.current = false;
+  };
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       <div className="absolute inset-0">
@@ -105,7 +129,7 @@ function Hero() {
             </div>
           </div>
 
-          <div className="relative animate-fade-in animation-delay-300">
+          <div className="relative animate-fade-in animation-delay-300 order-first lg:order-last">
             <div className="relative max-w-md mx-auto">
               <div 
                 className="absolute inset-0 rounded-3xl bg-linear-to-br 
@@ -140,7 +164,14 @@ function Hero() {
           <p className="text-sm text-muted-foreground mb-6 text-center">
             Technologies & Tools
           </p>
-          <div className="relative overflow-hidden">
+          <div 
+            ref={marqueeRef}
+            className="relative overflow-x-auto overflow-y-hidden cursor-grab active:cursor-grabbing select-none pb-4 mb-6 scrollbar-none"
+            onMouseDown={handleMouseDown}
+            onMouseMove={handleMouseMove}
+            onMouseUp={handleMouseUp}
+            onMouseLeave={handleMouseUp}
+          >
             <div className="flex animate-marquee">
               {[...skills, ...skills].map((skill, idx) => (
                 <div key={idx} className="shrink-0 px-8 py-4">
@@ -159,7 +190,7 @@ function Hero() {
           className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
         >
           <span className="text-xs uppercase tracking-wider">
-            Scroll
+            scroll to explore
           </span>
           <ChevronDown className="w-6 h-6 animate-bounce" />
         </a>

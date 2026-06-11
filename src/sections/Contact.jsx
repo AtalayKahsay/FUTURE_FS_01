@@ -1,6 +1,6 @@
 import { AlertCircle, CheckCircle, Mail, MapPin, Phone, Send } from "lucide-react";
 import Button from '@/components/Button';
-import { useState } from "react";
+import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 
 const contactInfo = [
@@ -35,6 +35,7 @@ function Contact() {
     type: null,
     message: "",
   });
+  const statusTimerRef = useRef(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -63,6 +64,11 @@ function Contact() {
         message: "Message sent successfully! I'll get back to you soon.",
       });
       setFormData({ name: "", email: "", message: "" });
+
+      if (statusTimerRef.current) clearTimeout(statusTimerRef.current);
+      statusTimerRef.current = setTimeout(() => {
+        setSubmitStatus({ type: null, message: "" });
+      }, 5000);
 
     } catch (err) {
       console.error("EmailJS error:", err);
