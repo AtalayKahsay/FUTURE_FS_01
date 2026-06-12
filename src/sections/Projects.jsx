@@ -8,7 +8,7 @@ const projects = [
   description: "A fine dining restaurant website with a dynamic photo gallery, email newsletter subscription, and an immersive dark UI with gold accents.",
   image: "/projects/golden-fork.png",
   tags: ["React", "CSS", "JavaScript"],
-  link: "#",
+  link: "https://future-fs-03-three-psi.vercel.app",
   github: "https://github.com/AtalayKahsay/FUTURE_FS_03",
 },
   {
@@ -16,7 +16,7 @@ const projects = [
     description: "A modern developer portfolio with smooth animations, a glass-effect UI, and a clean layout to showcase skills and projects.",
     image: "/projects/atalay-portfolio.png",
     tags: ["React", "Tailwind CSS", "JavaScript"],
-    link: "#",
+    link: "https://atalay-kahsay.vercel.app",
     github: "https://github.com/AtalayKahsay/FUTURE_FS_01",
   },
   {
