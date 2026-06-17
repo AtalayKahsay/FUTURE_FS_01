@@ -4,6 +4,14 @@ import AnimatedBorderButton from "@/components/AnimatedBorderButton";
 
 const projects = [
   {
+    title:"Mini CRM",
+    description: "A modern full-stack CRM platform featuring lead and deal management, sales pipeline tracking, task management, user authentication, role-based access control, password recovery, and analytics dashboards, built with React, Node.js, Express, and MongoDB.",
+    image: "/projects/mini-crm.png",
+    tags: ["React", "Express", "Node", "MongoDB"],
+    link: "#",
+    github: "https://github.com/AtalayKahsay/FUTURE_FS_02",
+  },
+  {
   title: "Golden Fork Restaurant",
   description: "A fine dining restaurant website with a dynamic photo gallery, email newsletter subscription, and an immersive dark UI with gold accents.",
   image: "/projects/golden-fork.png",
