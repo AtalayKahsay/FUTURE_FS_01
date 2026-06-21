@@ -9,7 +9,7 @@ const experiences = [
     current: true,
   },
   {
-    period: "Feb 2026 - Present",
+    period: "Dec 2025 - Present",
     role: "Full Stack Developer",
     company: "Self-Directed",
     description: "Built a series of personal projects from front-end interfaces to full stack applications, integrating REST APIs and both relational and non-relational databases.",
