@@ -8,7 +8,7 @@ const projects = [
     description: "A modern full-stack CRM platform featuring lead and deal management, sales pipeline tracking, task management, user authentication, role-based access control, password recovery, and analytics dashboards, built with React, Node.js, Express, and MongoDB.",
     image: "/projects/mini-crm.png",
     tags: ["React", "Express", "Node", "MongoDB"],
-    link: "#",
+    link: "https://mini-crm-rouge-kappa.vercel.app/",
     github: "https://github.com/AtalayKahsay/FUTURE_FS_02",
   },
   {
