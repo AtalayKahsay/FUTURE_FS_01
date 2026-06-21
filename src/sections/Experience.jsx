@@ -1,6 +1,6 @@
 const experiences = [
   {
-    period: "May 2026 - Present",
+    period: "May 2026 - June 2026",
     role: "Full Stack Web Developer",
     company: "Future Interns",
     description: "Building and delivering front-end and full-stack web projects as part of a structured internship program, covering responsive UI development, REST APIs, and database integration.",
