@@ -104,10 +104,15 @@ function Hero() {
                   Contact Me <ArrowRight className="w-5 h-5" />
                 </Button>
               </a>
-              <AnimatedBorderButton>
-                <Download className="w-5 h-5" />
-                Download CV
-              </AnimatedBorderButton>
+              <a
+                href="/resume/Atalay_Kahsay_Resume.pdf"
+                download="Atalay_Kahsay_Resume.pdf"
+              >
+                <AnimatedBorderButton>
+                  <Download className="w-5 h-5" />
+                  Download Resume
+                </AnimatedBorderButton>
+              </a>
             </div>
 
             <div 
